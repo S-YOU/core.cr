@@ -1,6 +1,9 @@
 require "db"
 
 module Core
+  # :nodoc:
+  alias Param = ::DB::Any | Array(::DB::Any)
+
   # Prepare *params* for database usage.
   #
   # ```
@@ -13,9 +16,9 @@ module Core
   def self.prepare_params(*params)
     params.map do |p|
       if p.is_a?(Enumerable)
-        p.map &.as(::DB::Any)
+        p.map &.as(Param)
       else
-        p.as(::DB::Any)
+        p.as(Param)
       end
     end
   end
@@ -25,9 +28,9 @@ module Core
   def self.explicit_prepare_params(*params)
     params.map do |p|
       if p.is_a?(Enumerable)
-        p.map(&.as(::DB::Any))
+        p.map(&.as(Param))
       else
-        p.as(::DB::Any)
+        p.as(Param)
       end
     end
   end

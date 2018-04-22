@@ -75,6 +75,18 @@ module Query::HavingSpec
         end
       end
 
+      context "with array values" do
+        it do
+          query = Query(User).having(id: [42, 43])
+
+          query.to_s.should eq <<-SQL
+          SELECT * FROM users HAVING (users.id = ANY(?))
+          SQL
+
+          query.params.should eq([[42, 43]])
+        end
+      end
+
       context "with reference" do
         user = User.new(id: 42)
 

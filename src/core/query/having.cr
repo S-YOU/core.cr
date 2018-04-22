@@ -2,7 +2,7 @@ require "./wherish"
 
 struct Core::Query(Schema)
   # :nodoc:
-  alias HavingTuple = NamedTuple(clause: String, params: Array(::DB::Any)?)
+  alias HavingTuple = NamedTuple(clause: String, params: Array(Param)?)
 
   # :nodoc:
   property having_values = [] of HavingTuple
@@ -25,7 +25,7 @@ struct Core::Query(Schema)
   def having(clause : String, params : Array? = nil, or = false)
     tuple = HavingTuple.new(
       clause: clause,
-      params: params.try &.map &.as(::DB::Any),
+      params: params.try &.map &.as(Param),
     )
 
     if or
@@ -139,8 +139,8 @@ struct Core::Query(Schema)
               )
             elsif value.is_a?(Enumerable)
               next group << HavingTuple.new(
-                clause: column + " IN (" + value.size.times.map { "?" }.join(", ") + ")",
-                params: value.map{ |v| field_to_db({{field}}, v) },
+                clause: column + " = ANY(?)",
+                params: [value.map{ |v| field_to_db({{field}}, v) }.as(Param)],
               )
             {% unless field[:type] == "Bool" %}
               elsif value == true
@@ -152,7 +152,7 @@ struct Core::Query(Schema)
             else
               next group << HavingTuple.new(
                 clause: column + " = ?",
-                params: Array(::DB::Any){field_to_db({{field}}, value)},
+                params: Array(Param){field_to_db({{field}}, value)},
               )
             end
         {% end %}
@@ -174,12 +174,12 @@ struct Core::Query(Schema)
             elsif value.is_a?({{reference[:type]}})
               next group << HavingTuple.new(
                 clause: column + " = ?",
-                params: [value.primary_key.as(::DB::Any)],
+                params: [value.primary_key.as(Param)],
               )
             elsif value.is_a?(Enumerable({{reference[:type]}}))
               next group << HavingTuple.new(
-                clause: column + " IN (" + value.size.times.map { "?" }.join(", ") + ")",
-                params: value.map &.primary_key.as(::DB::Any),
+                clause: column + " = ANY(?)",
+                params: [value.map &.primary_key.as(Param)],
               )
             else
               raise ArgumentError.new("#{key} value must be either nil, true, {{reference[:class].id}} or Enumerable({{reference[:class].id}})! Given: #{value.class}")
@@ -191,7 +191,7 @@ struct Core::Query(Schema)
       {% end %}
     end
 
-    having(group.map(&.[:clause]).join(" AND "), group.map(&.[:params]).flatten, or: or)
+    having(group.map(&.[:clause]).join(" AND "), group.flat_map(&.[:params]).compact, or: or)
   end
 
   # ditto
@@ -230,7 +230,7 @@ struct Core::Query(Schema)
       end
 
       query += having_values.map(&.[:clause]).join(" AND ") { |w| "(#{w})" }
-      params.concat(having_values.map(&.[:params]).flatten.compact)
+      params.concat(having_values.flat_map(&.[:params]).compact)
     end
 
     if or_having_values.any?
@@ -241,7 +241,7 @@ struct Core::Query(Schema)
       end
 
       query += or_having_values.map(&.[:clause]).join(" OR ") { |w| "(#{w})" }
-      params.concat(or_having_values.map(&.[:params]).flatten.compact)
+      params.concat(or_having_values.flat_map(&.[:params]).compact)
     end
   end
 end

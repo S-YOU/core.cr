@@ -75,6 +75,18 @@ module Query::WhereSpec
         end
       end
 
+      context "with array values" do
+        it do
+          query = Query(User).where(id: [42, 43])
+
+          query.to_s.should eq <<-SQL
+          SELECT * FROM users WHERE (users.id = ANY(?))
+          SQL
+
+          query.params.should eq([[42, 43]])
+        end
+      end
+
       context "with reference" do
         user = User.new(id: 42)
 

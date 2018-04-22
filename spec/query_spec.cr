@@ -1,6 +1,7 @@
 require "./spec_helper"
 
 require "../src/core/schema"
+require "../src/core/converters/enum"
 require "../src/core/query"
 
 alias Query = Core::Query
@@ -160,13 +161,13 @@ module QuerySpec
 
     describe "complex #and & #or" do
       it do
-        query = Query(User).where(id: [42, 43, 44]).having("char_length(name) > ?", [3]).and(role: User::Role::Admin).and_where(name: nil).or("id > ?", [24])
+        query = Query(User).where(id: [42, 43, 44]).having("char_length(name) > ?", [3]).and(role: User::Role::Admin).or(id: [44, 45]).and_where(name: nil).or("id > ?", [24])
 
         query.to_s.should eq <<-SQL
-        SELECT * FROM users WHERE (users.id IN (?, ?, ?)) AND (users.name IS NULL) OR (id > ?) HAVING (char_length(name) > ?) AND (users.role = ?)
+        SELECT * FROM users WHERE (users.id = ANY(?)) AND (users.name IS NULL) OR (id > ?) HAVING (char_length(name) > ?) AND (users.role = ?) OR (users.id = ANY(?))
         SQL
 
-        query.params.should eq([42, 43, 44, 24, 3, 1])
+        query.params.should eq([[42, 43, 44], 24, 3, 1, [44, 45]])
       end
     end
   end

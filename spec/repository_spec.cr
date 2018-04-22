@@ -82,7 +82,7 @@ module RepoSpec
 
   describe "#query" do
     context "with SQL" do
-      user = repo.query(User, "SELECT * FROM users WHERE id = ?", 1).first
+      user = repo.query(User, "SELECT * FROM users WHERE id = ANY(?)", [1, 2]).first
 
       it "returns a valid instance" do
         user.id.should be_a(Int32)
@@ -137,7 +137,7 @@ module RepoSpec
 
   describe "#query_all" do
     context "with SQL" do
-      users = repo.query_all(User, "SELECT * FROM users WHERE id = ?", 1)
+      users = repo.query_all(User, "SELECT * FROM users WHERE id = ANY(?)", [1, 2])
 
       it "returns valid instances" do
         users.should be_a(Array(User))

@@ -1,4 +1,5 @@
 require "./converter"
+require "./params"
 require "./query/*"
 
 # `Query` allows to build database queries without a hassle.
@@ -85,7 +86,7 @@ struct Core::Query(Schema)
   # A list of params for this query.
   #
   # NOTE: `params` set for the first time only **after** `#to_s` call.
-  getter params = [] of ::DB::Any
+  getter params = [] of (Param)
   protected setter params
 
   def initialize(model_instance : Schema? = nil)
