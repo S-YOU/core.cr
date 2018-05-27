@@ -1,0 +1,2050 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta id="repository-name" content="github.com/vladfaust/core.cr">
+  <link href="../../css/style.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="../../js/doc.js"></script>
+  <title>Core::Query::Instance(Schema) - github.com/vladfaust/core.cr</title>
+</head>
+<body>
+
+<div id="types-list">
+  <div id="search-box">
+    <input type="search" id="search-input" placeholder="Search...">
+  </div>
+
+  <ul>
+    <li><a href="../../index.html">README</a></li>
+  </ul>
+
+  <ul>
+  
+  <li class=" " data-id="github.com/vladfaust/core.cr/Array" data-name="array(t)">
+      <a href="../../Array.html">Array</a>
+      
+    </li>
+  
+  <li class="parent open current" data-id="github.com/vladfaust/core.cr/Core" data-name="core">
+      <a href="../../Core.html">Core</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/vladfaust/core.cr/Core/Converter" data-name="core::converter(t)">
+      <a href="../../Core/Converter.html">Converter</a>
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/vladfaust/core.cr/Core/Converters" data-name="core::converters">
+      <a href="../../Core/Converters.html">Converters</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/vladfaust/core.cr/Core/Converters/Enum" data-name="core::converters::enum(enumclass)">
+      <a href="../../Core/Converters/Enum.html">Enum</a>
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/vladfaust/core.cr/Core/Converters/PG" data-name="core::converters::pg">
+      <a href="../../Core/Converters/PG.html">PG</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/vladfaust/core.cr/Core/Converters/PG/Numeric" data-name="core::converters::pg::numeric">
+      <a href="../../Core/Converters/PG/Numeric.html">Numeric</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/vladfaust/core.cr/Core/Logger" data-name="core::logger">
+      <a href="../../Core/Logger.html">Logger</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/vladfaust/core.cr/Core/Logger/Dummy" data-name="core::logger::dummy">
+      <a href="../../Core/Logger/Dummy.html">Dummy</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/vladfaust/core.cr/Core/Logger/IO" data-name="core::logger::io">
+      <a href="../../Core/Logger/IO.html">IO</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/vladfaust/core.cr/Core/Logger/Standard" data-name="core::logger::standard">
+      <a href="../../Core/Logger/Standard.html">Standard</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="github.com/vladfaust/core.cr/Core/Param" data-name="core::param">
+      <a href="../../Core/Param.html">Param</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/vladfaust/core.cr/Core/PrimaryKey" data-name="core::primarykey">
+      <a href="../../Core/PrimaryKey.html">PrimaryKey</a>
+      
+    </li>
+  
+  <li class="parent open current" data-id="github.com/vladfaust/core.cr/Core/Query" data-name="core::query">
+      <a href="../../Core/Query.html">Query</a>
+      
+        <ul>
+  
+  <li class="parent open current" data-id="github.com/vladfaust/core.cr/Core/Query/Instance" data-name="core::query::instance(schema)">
+      <a href="../../Core/Query/Instance.html">Instance</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/vladfaust/core.cr/Core/Query/Instance/InternalHavingTuple" data-name="core::query::instance::internalhavingtuple">
+      <a href="../../Core/Query/Instance/InternalHavingTuple.html">InternalHavingTuple</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/vladfaust/core.cr/Core/Query/Instance/InternalWhereTuple" data-name="core::query::instance::internalwheretuple">
+      <a href="../../Core/Query/Instance/InternalWhereTuple.html">InternalWhereTuple</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/vladfaust/core.cr/Core/Query/Instance/QueryType" data-name="core::query::instance::querytype">
+      <a href="../../Core/Query/Instance/QueryType.html">QueryType</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/vladfaust/core.cr/Core/Repository" data-name="core::repository">
+      <a href="../../Core/Repository.html">Repository</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/vladfaust/core.cr/Core/Repository/Delete" data-name="core::repository::delete">
+      <a href="../../Core/Repository/Delete.html">Delete</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/vladfaust/core.cr/Core/Repository/Exec" data-name="core::repository::exec">
+      <a href="../../Core/Repository/Exec.html">Exec</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/vladfaust/core.cr/Core/Repository/Insert" data-name="core::repository::insert">
+      <a href="../../Core/Repository/Insert.html">Insert</a>
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/vladfaust/core.cr/Core/Repository/Query" data-name="core::repository::query">
+      <a href="../../Core/Repository/Query.html">Query</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/vladfaust/core.cr/Core/Repository/Query/NoResultsError" data-name="core::repository::query::noresultserror">
+      <a href="../../Core/Repository/Query/NoResultsError.html">NoResultsError</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="github.com/vladfaust/core.cr/Core/Repository/Scalar" data-name="core::repository::scalar">
+      <a href="../../Core/Repository/Scalar.html">Scalar</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/vladfaust/core.cr/Core/Repository/Update" data-name="core::repository::update">
+      <a href="../../Core/Repository/Update.html">Update</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="github.com/vladfaust/core.cr/Core/Schema" data-name="core::schema">
+      <a href="../../Core/Schema.html">Schema</a>
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/vladfaust/core.cr/Core/Validation" data-name="core::validation">
+      <a href="../../Core/Validation.html">Validation</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/vladfaust/core.cr/Core/Validation/ValidationError" data-name="core::validation::validationerror">
+      <a href="../../Core/Validation/ValidationError.html">ValidationError</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+</div>
+
+<div id="main-content">
+<h1 class="type-name">
+
+  <span class="kind">struct</span> Core::Query::Instance(Schema)
+
+</h1>
+
+
+  <ul class="superclass-hierarchy"><li class="superclass"><a href="../../Core/Query/Instance.html">Core::Query::Instance(Schema)</a></li><li class="superclass">Struct</li><li class="superclass">Value</li><li class="superclass">Object</li></ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2>Defined in:</h2>
+  
+    
+      <a href="https://github.com/vladfaust/core.cr/blob/b8a0603cebd3c93b2c83e55a9f9fcd04dfc38b5d/src/core/query/instance/group_by.cr#L1" target="_blank">core/query/instance/group_by.cr</a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/vladfaust/core.cr/blob/b8a0603cebd3c93b2c83e55a9f9fcd04dfc38b5d/src/core/query/instance/wherish.cr#L1" target="_blank">core/query/instance/wherish.cr</a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/vladfaust/core.cr/blob/b8a0603cebd3c93b2c83e55a9f9fcd04dfc38b5d/src/core/query/instance/having.cr#L3" target="_blank">core/query/instance/having.cr</a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/vladfaust/core.cr/blob/b8a0603cebd3c93b2c83e55a9f9fcd04dfc38b5d/src/core/query/instance/join.cr#L1" target="_blank">core/query/instance/join.cr</a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/vladfaust/core.cr/blob/b8a0603cebd3c93b2c83e55a9f9fcd04dfc38b5d/src/core/query/instance/limit.cr#L1" target="_blank">core/query/instance/limit.cr</a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/vladfaust/core.cr/blob/b8a0603cebd3c93b2c83e55a9f9fcd04dfc38b5d/src/core/query/instance/offset.cr#L1" target="_blank">core/query/instance/offset.cr</a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/vladfaust/core.cr/blob/b8a0603cebd3c93b2c83e55a9f9fcd04dfc38b5d/src/core/query/instance/order_by.cr#L1" target="_blank">core/query/instance/order_by.cr</a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/vladfaust/core.cr/blob/b8a0603cebd3c93b2c83e55a9f9fcd04dfc38b5d/src/core/query/instance/select.cr#L1" target="_blank">core/query/instance/select.cr</a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/vladfaust/core.cr/blob/b8a0603cebd3c93b2c83e55a9f9fcd04dfc38b5d/src/core/query/instance/set.cr#L1" target="_blank">core/query/instance/set.cr</a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/vladfaust/core.cr/blob/b8a0603cebd3c93b2c83e55a9f9fcd04dfc38b5d/src/core/query/instance/where.cr#L3" target="_blank">core/query/instance/where.cr</a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/vladfaust/core.cr/blob/b8a0603cebd3c93b2c83e55a9f9fcd04dfc38b5d/src/core/query/instance.cr#L4" target="_blank">core/query/instance.cr</a>
+    
+    <br/>
+  
+
+
+
+
+
+  <h2>Constructors</h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#new-class-method" class="signature"><strong>.new</strong></a>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+  <h2>Instance Method Summary</h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#all-instance-method" class="signature"><strong>#all</strong></a>
+        
+          <div class="summary"><p>Remove this query's <code><a href="../../Core/Query/Instance.html#limit%28limit%3AInt32%7CInt64%7CNil%29-instance-method">#limit</a></code> and return itself.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#and-instance-method" class="signature"><strong>#and</strong></a>
+        
+          <div class="summary"><p>A shorthand for calling <code><a href="../../Core/Query/Instance.html#and_where-instance-method">#and_where</a></code> or <code><a href="../../Core/Query/Instance.html#and_having-instance-method">#and_having</a></code> depending on the last clause call.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#and_having-instance-method" class="signature"><strong>#and_having</strong></a>
+        
+          <div class="summary"><p>A convenient way to add <code>"AND "HAVING</code> clauses.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#and_having%28clause%2C%2Aparams%29-instance-method" class="signature"><strong>#and_having</strong>(clause, *params)</a>
+        
+          <div class="summary"><p>Add <code>"AND "HAVING</code> clause.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#and_not-instance-method" class="signature"><strong>#and_not</strong></a>
+        
+          <div class="summary"><p>A shorthand for calling <code>and_where"_not"</code> or <code>and_"not_"having</code> depending on the last clause call.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#and_not_having-instance-method" class="signature"><strong>#and_not_having</strong></a>
+        
+          <div class="summary"><p>A convenient way to add <code>"AND ""NOT "HAVING</code> clauses.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#and_not_having%28clause%2C%2Aparams%29-instance-method" class="signature"><strong>#and_not_having</strong>(clause, *params)</a>
+        
+          <div class="summary"><p>Add <code>"AND ""NOT "HAVING</code> clause.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#and_where-instance-method" class="signature"><strong>#and_where</strong></a>
+        
+          <div class="summary"><p>A convenient way to add <code>"AND "WHERE</code> clauses.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#and_where%28clause%2C%2Aparams%29-instance-method" class="signature"><strong>#and_where</strong>(clause, *params)</a>
+        
+          <div class="summary"><p>Add <code>"AND "WHERE</code> clause.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#and_where_not-instance-method" class="signature"><strong>#and_where_not</strong></a>
+        
+          <div class="summary"><p>A convenient way to add <code>"AND ""NOT "WHERE</code> clauses.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#and_where_not%28clause%2C%2Aparams%29-instance-method" class="signature"><strong>#and_where_not</strong>(clause, *params)</a>
+        
+          <div class="summary"><p>Add <code>"AND ""NOT "WHERE</code> clause.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#append_mapping_marker%28mappable_type_name%2C_as%2C_select%3D%26quot%3B%2A%26quot%3B%29-instance-method" class="signature"><strong>#append_mapping_marker</strong>(mappable_type_name, _as, _select = <span class="s">&quot;*&quot;</span>)</a>
+        
+          <div class="summary"><p>Append SELECT marker used for mapping.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#clone-instance-method" class="signature"><strong>#clone</strong></a>
+        
+          <div class="summary"><p><span class="flag orange">TODO</span>  Split to modules.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#delete-instance-method" class="signature"><strong>#delete</strong></a>
+        
+          <div class="summary"><p>Mark this query as a DELETE one</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#first-instance-method" class="signature"><strong>#first</strong></a>
+        
+          <div class="summary"><p>Query the first row by <code>Model::Schema.primary_key[:name]</code>.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#full_join%28reference%2Cas_as%3Dnil%2Cselect_select%3D%26quot%3B%2A%26quot%3B%29-instance-method" class="signature"><strong>#full_join</strong>(reference, as _as = <span class="n">nil</span>, select _select = <span class="s">&quot;*&quot;</span>)</a>
+        
+          <div class="summary"><p><code>FULL JOIN</code> <em>reference</em>.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#full_outer_join%28reference%2Cas_as%3Dnil%2Cselect_select%3D%26quot%3B%2A%26quot%3B%29-instance-method" class="signature"><strong>#full_outer_join</strong>(reference, as _as = <span class="n">nil</span>, select _select = <span class="s">&quot;*&quot;</span>)</a>
+        
+          <div class="summary"><p><code>FULL OUTER JOIN</code> <em>reference</em>.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#group_by%28%2Agroup_by%29-instance-method" class="signature"><strong>#group_by</strong>(*group_by)</a>
+        
+          <div class="summary"><p>Append values to <code>GROUP_BY</code> clause.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#having%28clause%3AString%2Cparams%3AArray%7CTuple%7CNil%3Dnil%2Cor%3Dfalse%2Cnot%3Dfalse%29-instance-method" class="signature"><strong>#having</strong>(clause : String, params : Array | Tuple | Nil = <span class="n">nil</span>, or = <span class="n">false</span>, not = <span class="n">false</span>)</a>
+        
+          <div class="summary"><p>Add a <code>HAVING</code> <em>clause</em>, optionally interpolated with <em>params</em>.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#having%28or%3Dfalse%2Cnot%3Dfalse%2C%2A%2Ahaving%29-instance-method" class="signature"><strong>#having</strong>(or = <span class="n">false</span>, not = <span class="n">false</span>, **having)</a>
+        
+          <div class="summary"><p>A convenient way to add <code>HAVING</code> clauses.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#inner_join%28reference%2Cas_as%3Dnil%2Cselect_select%3D%26quot%3B%2A%26quot%3B%29-instance-method" class="signature"><strong>#inner_join</strong>(reference, as _as = <span class="n">nil</span>, select _select = <span class="s">&quot;*&quot;</span>)</a>
+        
+          <div class="summary"><p><code>INNER JOIN</code> <em>reference</em>.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#join%28reference%3ASymbol%2Cas_as%3ASymbol%3F%3Dnil%2Ctype_type%3ASymbol%3F%3Dnil%2Cselect_select%3AJoinSelectType%3D%26quot%3B%2A%26quot%3B%29-instance-method" class="signature"><strong>#join</strong>(reference : Symbol, as _as : Symbol? = <span class="n">nil</span>, type _type : Symbol? = <span class="n">nil</span>, select _select : JoinSelectType = <span class="s">&quot;*&quot;</span>)</a>
+        
+          <div class="summary"><p><code>JOIN</code> <em>reference</em> - leverages schema's references' potential.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#join%28table%3ASymbol%7CString%2Con%3ATuple%28Symbol%7CString%2CSymbol%7CString%29%2Cas_as%3ASymbol%7CString%3F%3Dnil%2Ctype_type%3ASymbol%3F%3Dnil%2Cselect_select%3AJoinSelectType%3D%26quot%3B%2A%26quot%3B%29-instance-method" class="signature"><strong>#join</strong>(table : Symbol | String, on : Tuple(Symbol | String, Symbol | String), as _as : Symbol | String? = <span class="n">nil</span>, type _type : Symbol? = <span class="n">nil</span>, select _select : JoinSelectType = <span class="s">&quot;*&quot;</span>)</a>
+        
+          <div class="summary"><p>Verbose <code>JOIN</code> by <em>table</em>.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#last-instance-method" class="signature"><strong>#last</strong></a>
+        
+          <div class="summary"><p>Query the last row by <code>Model::Schema.primary_key[:name]</code>.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#left_join%28reference%2Cas_as%3Dnil%2Cselect_select%3D%26quot%3B%2A%26quot%3B%29-instance-method" class="signature"><strong>#left_join</strong>(reference, as _as = <span class="n">nil</span>, select _select = <span class="s">&quot;*&quot;</span>)</a>
+        
+          <div class="summary"><p><code>LEFT JOIN</code> <em>reference</em>.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#left_outer_join%28reference%2Cas_as%3Dnil%2Cselect_select%3D%26quot%3B%2A%26quot%3B%29-instance-method" class="signature"><strong>#left_outer_join</strong>(reference, as _as = <span class="n">nil</span>, select _select = <span class="s">&quot;*&quot;</span>)</a>
+        
+          <div class="summary"><p><code>LEFT OUTER JOIN</code> <em>reference</em>.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#limit%28limit%3AInt32%7CInt64%7CNil%29-instance-method" class="signature"><strong>#limit</strong>(limit : Int32 | Int64 | Nil)</a>
+        
+          <div class="summary"><p>Set <code>LIMIT</code> clause.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#not_having%28clause%2C%2Aparams%29-instance-method" class="signature"><strong>#not_having</strong>(clause, *params)</a>
+        
+          <div class="summary"><p>Add <code>HAVING NOT</code> clause.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#not_having-instance-method" class="signature"><strong>#not_having</strong></a>
+        
+          <div class="summary"><p>Add <code>HAVING NOT</code> clause.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#offset%28offset%3AInt32%7CInt64%7CNil%29-instance-method" class="signature"><strong>#offset</strong>(offset : Int32 | Int64 | Nil)</a>
+        
+          <div class="summary"><p>Set <code>OFFSET</code> clause.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#one-instance-method" class="signature"><strong>#one</strong></a>
+        
+          <div class="summary"><p>Sets this query limit to 1.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#or-instance-method" class="signature"><strong>#or</strong></a>
+        
+          <div class="summary"><p>A shorthand for calling <code><a href="../../Core/Query/Instance.html#or_where-instance-method">#or_where</a></code> or <code><a href="../../Core/Query/Instance.html#or_having-instance-method">#or_having</a></code> depending on the last clause call.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#or_having%28clause%2C%2Aparams%29-instance-method" class="signature"><strong>#or_having</strong>(clause, *params)</a>
+        
+          <div class="summary"><p>Add <code>"OR "HAVING</code> clause.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#or_having-instance-method" class="signature"><strong>#or_having</strong></a>
+        
+          <div class="summary"><p>A convenient way to add <code>"OR "HAVING</code> clauses.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#or_not-instance-method" class="signature"><strong>#or_not</strong></a>
+        
+          <div class="summary"><p>A shorthand for calling <code>or_where"_not"</code> or <code>or_"not_"having</code> depending on the last clause call.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#or_not_having%28clause%2C%2Aparams%29-instance-method" class="signature"><strong>#or_not_having</strong>(clause, *params)</a>
+        
+          <div class="summary"><p>Add <code>"OR ""NOT "HAVING</code> clause.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#or_not_having-instance-method" class="signature"><strong>#or_not_having</strong></a>
+        
+          <div class="summary"><p>A convenient way to add <code>"OR ""NOT "HAVING</code> clauses.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#or_where-instance-method" class="signature"><strong>#or_where</strong></a>
+        
+          <div class="summary"><p>A convenient way to add <code>"OR "WHERE</code> clauses.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#or_where%28clause%2C%2Aparams%29-instance-method" class="signature"><strong>#or_where</strong>(clause, *params)</a>
+        
+          <div class="summary"><p>Add <code>"OR "WHERE</code> clause.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#or_where_not%28clause%2C%2Aparams%29-instance-method" class="signature"><strong>#or_where_not</strong>(clause, *params)</a>
+        
+          <div class="summary"><p>Add <code>"OR ""NOT "WHERE</code> clause.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#or_where_not-instance-method" class="signature"><strong>#or_where_not</strong></a>
+        
+          <div class="summary"><p>A convenient way to add <code>"OR ""NOT "WHERE</code> clauses.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#order_by%28column%3ASymbol%7CString%2Corder%3ASymbol%7CString%7CNil%3Dnil%29-instance-method" class="signature"><strong>#order_by</strong>(column : Symbol | String, order : Symbol | String | Nil = <span class="n">nil</span>)</a>
+        
+          <div class="summary"><p>Add <code>ORDER BY</code> clause.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#params-instance-method" class="signature"><strong>#params</strong></a>
+        
+          <div class="summary"><p>A list of params for this query.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#query_type-instance-method" class="signature"><strong>#query_type</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#reset-instance-method" class="signature"><strong>#reset</strong></a>
+        
+          <div class="summary"><p>Reset all the values to defaults.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#right_join%28reference%2Cas_as%3Dnil%2Cselect_select%3D%26quot%3B%2A%26quot%3B%29-instance-method" class="signature"><strong>#right_join</strong>(reference, as _as = <span class="n">nil</span>, select _select = <span class="s">&quot;*&quot;</span>)</a>
+        
+          <div class="summary"><p><code>RIGHT JOIN</code> <em>reference</em>.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#right_outer_join%28reference%2Cas_as%3Dnil%2Cselect_select%3D%26quot%3B%2A%26quot%3B%29-instance-method" class="signature"><strong>#right_outer_join</strong>(reference, as _as = <span class="n">nil</span>, select _select = <span class="s">&quot;*&quot;</span>)</a>
+        
+          <div class="summary"><p><code>RIGHT OUTER JOIN</code> <em>reference</em>.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#select%28%2Avalues%29-instance-method" class="signature"><strong>#select</strong>(*values)</a>
+        
+          <div class="summary"><p>schema :users do     primary_key :id     field :foo, String     field :bar, String, key: :baz   end end</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#select-instance-method" class="signature"><strong>#select</strong></a>
+        
+          <div class="summary"><p>Mark this query as a SELECT one (default)</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#set-instance-method" class="signature"><strong>#set</strong></a>
+        
+          <div class="summary"><p>Append values to <code>SET</code> clauses, setting Query type to <code>UPDATE</code>.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#set%28clause%2C%2Aparams%29-instance-method" class="signature"><strong>#set</strong>(clause, *params)</a>
+        
+          <div class="summary"><p>Append explicit value to <code>SET</code> clauses, setting Query type to <code>UPDATE</code>.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#to_s-instance-method" class="signature"><strong>#to_s</strong></a>
+        
+          <div class="summary"><p>Build the query, returning its SQL representation.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#update-instance-method" class="signature"><strong>#update</strong></a>
+        
+          <div class="summary"><p>Mark this query as an UPDATE one</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#where%28or%3Dfalse%2Cnot%3Dfalse%2C%2A%2Awhere%29-instance-method" class="signature"><strong>#where</strong>(or = <span class="n">false</span>, not = <span class="n">false</span>, **where)</a>
+        
+          <div class="summary"><p>A convenient way to add <code>WHERE</code> clauses.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#where%28clause%3AString%2Cparams%3AArray%7CTuple%7CNil%3Dnil%2Cor%3Dfalse%2Cnot%3Dfalse%29-instance-method" class="signature"><strong>#where</strong>(clause : String, params : Array | Tuple | Nil = <span class="n">nil</span>, or = <span class="n">false</span>, not = <span class="n">false</span>)</a>
+        
+          <div class="summary"><p>Add a <code>WHERE</code> <em>clause</em>, optionally interpolated with <em>params</em>.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#where_not-instance-method" class="signature"><strong>#where_not</strong></a>
+        
+          <div class="summary"><p>Add <code>WHERE NOT</code> clause.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#where_not%28clause%2C%2Aparams%29-instance-method" class="signature"><strong>#where_not</strong>(clause, *params)</a>
+        
+          <div class="summary"><p>Add <code>WHERE NOT</code> clause.</p></div>
+        
+      </li>
+    
+  </ul>
+
+
+
+  <h2>Macro Summary</h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#field_to_db%28field%2Cvalue%29-macro" class="signature"><strong>field_to_db</strong>(field, value)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#map_select_to_field_keys%28reference_type%2Cselects%29-macro" class="signature"><strong>map_select_to_field_keys</strong>(reference_type, selects)</a>
+        
+      </li>
+    
+  </ul>
+
+
+
+<div class="methods-inherited">
+  
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+  
+</div>
+
+
+  <h2>Constructor Detail</h2>
+  
+    <div class="entry-detail" id="new-class-method">
+      <div class="signature">
+        
+        def self.<strong>new</strong>
+
+        <a class="method-permalink" href="#new-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/vladfaust/core.cr/blob/b8a0603cebd3c93b2c83e55a9f9fcd04dfc38b5d/src/core/query/instance/group_by.cr#L1" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+
+
+  <h2>Instance Method Detail</h2>
+  
+    <div class="entry-detail" id="all-instance-method">
+      <div class="signature">
+        
+        def <strong>all</strong>
+
+        <a class="method-permalink" href="#all-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Remove this query's <code><a href="../../Core/Query/Instance.html#limit%28limit%3AInt32%7CInt64%7CNil%29-instance-method">#limit</a></code> and return itself.</p>
+
+<pre><code>query <span class="o">=</span> <span class="t">Query</span>(<span class="t">User</span>).<span class="k">new</span>.limit(<span class="n">3</span>).offset(<span class="n">5</span>).all.to_s
+<span class="c"># =&gt; SELECT * FROM users OFFSET 5</span></code></pre></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/vladfaust/core.cr/blob/b8a0603cebd3c93b2c83e55a9f9fcd04dfc38b5d/src/core/query/instance.cr#L73" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="and-instance-method">
+      <div class="signature">
+        
+        def <strong>and</strong>
+
+        <a class="method-permalink" href="#and-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>A shorthand for calling <code><a href="../../Core/Query/Instance.html#and_where-instance-method">#and_where</a></code> or <code><a href="../../Core/Query/Instance.html#and_having-instance-method">#and_having</a></code> depending on the last clause call.</p>
+
+<pre><code>query.where(foo: <span class="s">&quot;bar&quot;</span>).and(baz: <span class="s">&quot;qux&quot;</span>)
+<span class="c"># =&gt; WHERE (foo = &#39;bar&#39;) AND (baz = &#39;qux&#39;)</span>
+query.having(foo: <span class="s">&quot;bar&quot;</span>).and(baz: <span class="s">&quot;qux&quot;</span>)
+<span class="c"># =&gt; HAVING (foo = &#39;bar&#39;) AND (baz = &#39;qux&#39;)</span></code></pre></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/vladfaust/core.cr/blob/b8a0603cebd3c93b2c83e55a9f9fcd04dfc38b5d/src/core/query/instance/wherish.cr#L20" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="and_having-instance-method">
+      <div class="signature">
+        
+        def <strong>and_having</strong>
+
+        <a class="method-permalink" href="#and_having-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>A convenient way to add <code>"AND "HAVING</code> clauses. Multiple clauses in a single call are joined with <code>AND</code>. See <code><a href="../../Core/Query/Instance.html#having%28clause%3AString%2Cparams%3AArray%7CTuple%7CNil%3Dnil%2Cor%3Dfalse%2Cnot%3Dfalse%29-instance-method">#having</a></code> for examples.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/vladfaust/core.cr/blob/b8a0603cebd3c93b2c83e55a9f9fcd04dfc38b5d/src/core/query/instance/having.cr#L138" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="and_having(clause,*params)-instance-method">
+      <div class="signature">
+        
+        def <strong>and_having</strong>(clause, *params)
+
+        <a class="method-permalink" href="#and_having%28clause%2C%2Aparams%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Add <code>"AND "HAVING</code> clause.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/vladfaust/core.cr/blob/b8a0603cebd3c93b2c83e55a9f9fcd04dfc38b5d/src/core/query/instance/having.cr#L138" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="and_not-instance-method">
+      <div class="signature">
+        
+        def <strong>and_not</strong>
+
+        <a class="method-permalink" href="#and_not-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>A shorthand for calling <code>and_where"_not"</code> or <code>and_"not_"having</code> depending on the last clause call.</p>
+
+<pre><code>query.where(foo: <span class="s">&quot;bar&quot;</span>).and<span class="s">&quot;_not&quot;</span>(baz: <span class="s">&quot;qux&quot;</span>)
+<span class="c"># =&gt; WHERE (foo = &#39;bar&#39;) AND&quot; NOT&quot; (baz = &#39;qux&#39;)</span>
+query.having(foo: <span class="s">&quot;bar&quot;</span>).and<span class="s">&quot;_not&quot;</span>(baz: <span class="s">&quot;qux&quot;</span>)
+<span class="c"># =&gt; HAVING (foo = &#39;bar&#39;) AND&quot; NOT&quot; (baz = &#39;qux&#39;)</span></code></pre></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/vladfaust/core.cr/blob/b8a0603cebd3c93b2c83e55a9f9fcd04dfc38b5d/src/core/query/instance/wherish.cr#L20" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="and_not_having-instance-method">
+      <div class="signature">
+        
+        def <strong>and_not_having</strong>
+
+        <a class="method-permalink" href="#and_not_having-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>A convenient way to add <code>"AND ""NOT "HAVING</code> clauses. Multiple clauses in a single call are joined with <code>AND</code>. See <code><a href="../../Core/Query/Instance.html#having%28clause%3AString%2Cparams%3AArray%7CTuple%7CNil%3Dnil%2Cor%3Dfalse%2Cnot%3Dfalse%29-instance-method">#having</a></code> for examples.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/vladfaust/core.cr/blob/b8a0603cebd3c93b2c83e55a9f9fcd04dfc38b5d/src/core/query/instance/having.cr#L138" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="and_not_having(clause,*params)-instance-method">
+      <div class="signature">
+        
+        def <strong>and_not_having</strong>(clause, *params)
+
+        <a class="method-permalink" href="#and_not_having%28clause%2C%2Aparams%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Add <code>"AND ""NOT "HAVING</code> clause.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/vladfaust/core.cr/blob/b8a0603cebd3c93b2c83e55a9f9fcd04dfc38b5d/src/core/query/instance/having.cr#L138" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="and_where-instance-method">
+      <div class="signature">
+        
+        def <strong>and_where</strong>
+
+        <a class="method-permalink" href="#and_where-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>A convenient way to add <code>"AND "WHERE</code> clauses. Multiple clauses in a single call are joined with <code>AND</code>. See <code><a href="../../Core/Query/Instance.html#where%28or%3Dfalse%2Cnot%3Dfalse%2C%2A%2Awhere%29-instance-method">#where</a></code> for examples.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/vladfaust/core.cr/blob/b8a0603cebd3c93b2c83e55a9f9fcd04dfc38b5d/src/core/query/instance/where.cr#L138" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="and_where(clause,*params)-instance-method">
+      <div class="signature">
+        
+        def <strong>and_where</strong>(clause, *params)
+
+        <a class="method-permalink" href="#and_where%28clause%2C%2Aparams%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Add <code>"AND "WHERE</code> clause.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/vladfaust/core.cr/blob/b8a0603cebd3c93b2c83e55a9f9fcd04dfc38b5d/src/core/query/instance/where.cr#L138" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="and_where_not-instance-method">
+      <div class="signature">
+        
+        def <strong>and_where_not</strong>
+
+        <a class="method-permalink" href="#and_where_not-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>A convenient way to add <code>"AND ""NOT "WHERE</code> clauses. Multiple clauses in a single call are joined with <code>AND</code>. See <code><a href="../../Core/Query/Instance.html#where%28or%3Dfalse%2Cnot%3Dfalse%2C%2A%2Awhere%29-instance-method">#where</a></code> for examples.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/vladfaust/core.cr/blob/b8a0603cebd3c93b2c83e55a9f9fcd04dfc38b5d/src/core/query/instance/where.cr#L138" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="and_where_not(clause,*params)-instance-method">
+      <div class="signature">
+        
+        def <strong>and_where_not</strong>(clause, *params)
+
+        <a class="method-permalink" href="#and_where_not%28clause%2C%2Aparams%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Add <code>"AND ""NOT "WHERE</code> clause.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/vladfaust/core.cr/blob/b8a0603cebd3c93b2c83e55a9f9fcd04dfc38b5d/src/core/query/instance/where.cr#L138" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="append_mapping_marker(mappable_type_name,_as,_select=&amp;quot;*&amp;quot;)-instance-method">
+      <div class="signature">
+        
+        def <strong>append_mapping_marker</strong>(mappable_type_name, _as, _select = <span class="s">&quot;*&quot;</span>)
+
+        <a class="method-permalink" href="#append_mapping_marker%28mappable_type_name%2C_as%2C_select%3D%26quot%3B%2A%26quot%3B%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Append SELECT marker used for mapping. E.g. <code>append_mapping_marker("post")</code> would append "SELECT '' AS _post, posts.*"</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/vladfaust/core.cr/blob/b8a0603cebd3c93b2c83e55a9f9fcd04dfc38b5d/src/core/query/instance/join.cr#L119" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="clone-instance-method">
+      <div class="signature">
+        
+        def <strong>clone</strong>
+
+        <a class="method-permalink" href="#clone-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p><span class="flag orange">TODO</span>  Split to modules. Currently impossible due to https://github.com/crystal-lang/crystal/issues/5023</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/vladfaust/core.cr/blob/b8a0603cebd3c93b2c83e55a9f9fcd04dfc38b5d/src/core/query/instance.cr#L35" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="delete-instance-method">
+      <div class="signature">
+        
+        def <strong>delete</strong>
+
+        <a class="method-permalink" href="#delete-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Mark this query as a DELETE one</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/vladfaust/core.cr/blob/b8a0603cebd3c93b2c83e55a9f9fcd04dfc38b5d/src/core/query/instance.cr#L62" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="first-instance-method">
+      <div class="signature">
+        
+        def <strong>first</strong>
+
+        <a class="method-permalink" href="#first-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Query the first row by <code>Model::Schema.primary_key[:name]</code>.</p>
+
+<pre><code><span class="t">Query</span>(<span class="t">User</span>).<span class="k">new</span>.first.to_s
+<span class="c"># =&gt; SELECT * FROM users ORDER BY id ASC LIMIT 1</span></code></pre></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/vladfaust/core.cr/blob/b8a0603cebd3c93b2c83e55a9f9fcd04dfc38b5d/src/core/query/instance.cr#L107" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="full_join(reference,as_as=nil,select_select=&amp;quot;*&amp;quot;)-instance-method">
+      <div class="signature">
+        
+        def <strong>full_join</strong>(reference, as _as = <span class="n">nil</span>, select _select = <span class="s">&quot;*&quot;</span>)
+
+        <a class="method-permalink" href="#full_join%28reference%2Cas_as%3Dnil%2Cselect_select%3D%26quot%3B%2A%26quot%3B%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p><code>FULL JOIN</code> <em>reference</em>. See <code><a href="../../Core/Query/Instance.html#join%28reference%3ASymbol%2Cas_as%3ASymbol%3F%3Dnil%2Ctype_type%3ASymbol%3F%3Dnil%2Cselect_select%3AJoinSelectType%3D%26quot%3B%2A%26quot%3B%29-instance-method">#join</a></code>.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/vladfaust/core.cr/blob/b8a0603cebd3c93b2c83e55a9f9fcd04dfc38b5d/src/core/query/instance/join.cr#L157" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="full_outer_join(reference,as_as=nil,select_select=&amp;quot;*&amp;quot;)-instance-method">
+      <div class="signature">
+        
+        def <strong>full_outer_join</strong>(reference, as _as = <span class="n">nil</span>, select _select = <span class="s">&quot;*&quot;</span>)
+
+        <a class="method-permalink" href="#full_outer_join%28reference%2Cas_as%3Dnil%2Cselect_select%3D%26quot%3B%2A%26quot%3B%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p><code>FULL OUTER JOIN</code> <em>reference</em>. See <code><a href="../../Core/Query/Instance.html#join%28reference%3ASymbol%2Cas_as%3ASymbol%3F%3Dnil%2Ctype_type%3ASymbol%3F%3Dnil%2Cselect_select%3AJoinSelectType%3D%26quot%3B%2A%26quot%3B%29-instance-method">#join</a></code>.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/vladfaust/core.cr/blob/b8a0603cebd3c93b2c83e55a9f9fcd04dfc38b5d/src/core/query/instance/join.cr#L157" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="group_by(*group_by)-instance-method">
+      <div class="signature">
+        
+        def <strong>group_by</strong>(*group_by)
+
+        <a class="method-permalink" href="#group_by%28%2Agroup_by%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Append values to <code>GROUP_BY</code> clause.</p>
+
+<pre><code><span class="t">Query</span>.<span class="k">new</span>(<span class="t">User</span>).group_by(<span class="s">&quot;users.id&quot;</span>).to_s
+<span class="c"># =&gt; SELECT * FROM users GROUP_BY users.id</span></code></pre></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/vladfaust/core.cr/blob/b8a0603cebd3c93b2c83e55a9f9fcd04dfc38b5d/src/core/query/instance/group_by.cr#L11" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="having(clause:String,params:Array|Tuple|Nil=nil,or=false,not=false)-instance-method">
+      <div class="signature">
+        
+        def <strong>having</strong>(clause : String, params : <a href="../../Array.html">Array</a> | Tuple | Nil = <span class="n">nil</span>, or = <span class="n">false</span>, not = <span class="n">false</span>)
+
+        <a class="method-permalink" href="#having%28clause%3AString%2Cparams%3AArray%7CTuple%7CNil%3Dnil%2Cor%3Dfalse%2Cnot%3Dfalse%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Add a <code>HAVING</code> <em>clause</em>, optionally interpolated with <em>params</em>. Multiple calls will join clauses with <code>AND</code>.</p>
+
+<pre><code>query.having(<span class="s">&quot;char_length(name) &gt; ?&quot;</span>, [<span class="n">10</span>]).and_not_having(<span class="s">&quot;created_at &gt; NOW()&quot;</span>).to_s
+<span class="c"># =&gt; HAVING (char_length(name) &gt; ?) AND NOT (created_at &gt; NOW())</span></code></pre></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/vladfaust/core.cr/blob/b8a0603cebd3c93b2c83e55a9f9fcd04dfc38b5d/src/core/query/instance/having.cr#L17" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="having(or=false,not=false,**having)-instance-method">
+      <div class="signature">
+        
+        def <strong>having</strong>(or = <span class="n">false</span>, not = <span class="n">false</span>, **having)
+
+        <a class="method-permalink" href="#having%28or%3Dfalse%2Cnot%3Dfalse%2C%2A%2Ahaving%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>A convenient way to add <code>HAVING</code> clauses. Multiple clauses in a single call are joined with <code>AND</code>. Examples:</p>
+
+<pre><code>user <span class="o">=</span> <span class="t">User</span>.<span class="k">new</span>(id: <span class="n">42</span>)
+query <span class="o">=</span> <span class="t">Query</span>.<span class="k">new</span>(<span class="t">Post</span>)
+
+<span class="c"># All clauses below will result in</span>
+<span class="c"># &quot;HAVING (posts.author_id = ?)&quot;</span>
+<span class="c"># with params [42]</span>
+query.having(author: user)
+query.having(author_id: user.id)
+query.having(<span class="s">&quot;posts.author_id = ?&quot;</span>, user.id)
+
+<span class="c"># Will result in</span>
+<span class="c"># &quot;HAVING (posts.author_id IN (?, ?) AND posts.popular = ?)&quot;</span>
+<span class="c"># with params [1, 2, true]</span>
+query.having(author_id: [<span class="n">1</span>, <span class="n">2</span>], popular: <span class="n">true</span>)
+
+<span class="c"># Will result in</span>
+<span class="c"># &quot;HAVING NOT ((posts.author_id = ? AND posts.editor_id IS NULL))&quot;</span>
+<span class="c"># with params [42]</span>
+query.not_having(author: user, editor: <span class="n">nil</span>)
+
+<span class="c"># Will result in</span>
+<span class="c"># &quot;HAVING (posts.author_id = ?) OR NOT (posts.editor_id IS NOT NULL)&quot;</span>
+<span class="c"># with params [42]</span>
+query.having(author: user).or_not_having(editor: <span class="o">!</span><span class="n">nil</span>)
+
+<span class="c"># Will result in</span>
+<span class="c"># &quot;HAVING (users.role = ?)&quot;</span>
+<span class="c"># with params [1]</span>
+<span class="t">User</span>.having(role: <span class="t">User</span><span class="t">::</span><span class="t">Role</span><span class="t">::</span><span class="t">Admin</span>)</code></pre></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/vladfaust/core.cr/blob/b8a0603cebd3c93b2c83e55a9f9fcd04dfc38b5d/src/core/query/instance/having.cr#L56" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="inner_join(reference,as_as=nil,select_select=&amp;quot;*&amp;quot;)-instance-method">
+      <div class="signature">
+        
+        def <strong>inner_join</strong>(reference, as _as = <span class="n">nil</span>, select _select = <span class="s">&quot;*&quot;</span>)
+
+        <a class="method-permalink" href="#inner_join%28reference%2Cas_as%3Dnil%2Cselect_select%3D%26quot%3B%2A%26quot%3B%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p><code>INNER JOIN</code> <em>reference</em>. See <code><a href="../../Core/Query/Instance.html#join%28reference%3ASymbol%2Cas_as%3ASymbol%3F%3Dnil%2Ctype_type%3ASymbol%3F%3Dnil%2Cselect_select%3AJoinSelectType%3D%26quot%3B%2A%26quot%3B%29-instance-method">#join</a></code>.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/vladfaust/core.cr/blob/b8a0603cebd3c93b2c83e55a9f9fcd04dfc38b5d/src/core/query/instance/join.cr#L153" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="join(reference:Symbol,as_as:Symbol?=nil,type_type:Symbol?=nil,select_select:JoinSelectType=&amp;quot;*&amp;quot;)-instance-method">
+      <div class="signature">
+        
+        def <strong>join</strong>(reference : Symbol, as _as : Symbol? = <span class="n">nil</span>, type _type : Symbol? = <span class="n">nil</span>, select _select : JoinSelectType = <span class="s">&quot;*&quot;</span>)
+
+        <a class="method-permalink" href="#join%28reference%3ASymbol%2Cas_as%3ASymbol%3F%3Dnil%2Ctype_type%3ASymbol%3F%3Dnil%2Cselect_select%3AJoinSelectType%3D%26quot%3B%2A%26quot%3B%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p><code>JOIN</code> <em>reference</em> - leverages schema's references' potential.</p>
+
+<ul><li><em>reference</em> means <strong>what</strong> to join;</li><li><em>as</em> defines alias. Default to <em>reference</em>;</li><li><em>type</em> declares a joining type (e.g. :left_outer);</li><li><em>select</em> specifies which fields to select (<code>nil</code> for none, <code>*</code> by default).</li></ul>
+
+<pre><code><span class="k">class</span> <span class="t">User</span>
+  <span class="k">include</span> <span class="t">Core</span><span class="t">::</span><span class="t">Schema</span>
+  <span class="k">include</span> <span class="t">Core</span><span class="t">::</span><span class="t">Query</span>
+
+  schema <span class="n">:users</span> <span class="k">do</span>
+    primary_key <span class="n">:id</span>
+    reference <span class="n">:authored_posts</span>, <span class="t">Array</span>(<span class="t">Post</span>), foreign_key: <span class="n">:author_id</span>
+    reference <span class="n">:edited_posts</span>, <span class="t">Array</span>(<span class="t">Post</span>), foreign_key: <span class="n">:editor_id</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="k">class</span> <span class="t">Post</span>
+  <span class="k">include</span> <span class="t">Core</span><span class="t">::</span><span class="t">Schema</span>
+  <span class="k">include</span> <span class="t">Core</span><span class="t">::</span><span class="t">Query</span>
+
+  schema <span class="n">:users</span> <span class="k">do</span>
+    primary_key <span class="n">:id</span>
+    reference <span class="n">:author</span>, <span class="t">User</span>, key: <span class="n">:author_id</span>
+    reference <span class="n">:editor</span>, <span class="t">User</span>, key: <span class="n">:editor_id</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="t">Post</span>.join(<span class="n">:author</span>, select: <span class="n">:id</span>).to_s
+<span class="c"># =&gt; SELECT posts.*, &#39;&#39; AS _author, author.id FROM posts JOIN users AS author ON author.id = posts.author_id</span>
+
+<span class="t">Post</span>.join(<span class="n">:author</span>, select: <span class="n">nil</span>).where(<span class="s">&quot;author.id = ?&quot;</span>, [<span class="n">1</span>]).to_s
+<span class="c"># =&gt; SELECT posts.* FROM posts JOIN users AS author ON author.id = posts.author_id WHERE author.id = ?</span>
+
+<span class="t">User</span>.join(<span class="n">:authored_posts</span>, <span class="k">as</span>: <span class="n">:written_posts</span>).to_s
+<span class="c"># =&gt; SELECT posts.*, &#39;&#39; as _post, written_posts.* FROM users JOIN posts AS written_posts ON users.id = written_posts.author_id</span>
+
+<span class="t">Post</span>.right_outer_join(<span class="n">:editor</span>).to_s                    <span class="c"># Equal</span>
+<span class="t">Query</span>.<span class="k">new</span>(<span class="t">Post</span>).join(<span class="n">:editor</span>, <span class="k">type</span>: <span class="n">:right_outer</span>).to_s <span class="c"># Equal</span>
+<span class="c"># =&gt; SELECT posts.*, &#39;&#39; as _user, editor.* FROM posts RIGHT OUTER JOIN users AS editor ON editor.id = posts.editor_id</span></code></pre></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/vladfaust/core.cr/blob/b8a0603cebd3c93b2c83e55a9f9fcd04dfc38b5d/src/core/query/instance/join.cr#L84" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="join(table:Symbol|String,on:Tuple(Symbol|String,Symbol|String),as_as:Symbol|String?=nil,type_type:Symbol?=nil,select_select:JoinSelectType=&amp;quot;*&amp;quot;)-instance-method">
+      <div class="signature">
+        
+        def <strong>join</strong>(table : Symbol | String, on : Tuple(Symbol | String, Symbol | String), as _as : Symbol | String? = <span class="n">nil</span>, type _type : Symbol? = <span class="n">nil</span>, select _select : JoinSelectType = <span class="s">&quot;*&quot;</span>)
+
+        <a class="method-permalink" href="#join%28table%3ASymbol%7CString%2Con%3ATuple%28Symbol%7CString%2CSymbol%7CString%29%2Cas_as%3ASymbol%7CString%3F%3Dnil%2Ctype_type%3ASymbol%3F%3Dnil%2Cselect_select%3AJoinSelectType%3D%26quot%3B%2A%26quot%3B%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Verbose <code>JOIN</code> by <em>table</em>. Selects all joined columns by default.</p>
+
+<pre><code><span class="t">User</span>.join(<span class="n">:posts</span>, on: {<span class="n">:author_id</span>, <span class="n">:id</span>}, <span class="k">as</span>: <span class="n">:written_posts</span>).to_s
+<span class="c"># =&gt; SELECT * FROM users JOIN posts AS written_posts ON written_posts.author_id = users.id</span></code></pre></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/vladfaust/core.cr/blob/b8a0603cebd3c93b2c83e55a9f9fcd04dfc38b5d/src/core/query/instance/join.cr#L23" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="last-instance-method">
+      <div class="signature">
+        
+        def <strong>last</strong>
+
+        <a class="method-permalink" href="#last-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Query the last row by <code>Model::Schema.primary_key[:name]</code>.</p>
+
+<pre><code><span class="t">Query</span>(<span class="t">User</span>).<span class="k">new</span>.last.to_s
+<span class="c"># =&gt; SELECT * FROM users ORDER BY id DESC LIMIT 1</span></code></pre></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/vladfaust/core.cr/blob/b8a0603cebd3c93b2c83e55a9f9fcd04dfc38b5d/src/core/query/instance.cr#L95" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="left_join(reference,as_as=nil,select_select=&amp;quot;*&amp;quot;)-instance-method">
+      <div class="signature">
+        
+        def <strong>left_join</strong>(reference, as _as = <span class="n">nil</span>, select _select = <span class="s">&quot;*&quot;</span>)
+
+        <a class="method-permalink" href="#left_join%28reference%2Cas_as%3Dnil%2Cselect_select%3D%26quot%3B%2A%26quot%3B%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p><code>LEFT JOIN</code> <em>reference</em>. See <code><a href="../../Core/Query/Instance.html#join%28reference%3ASymbol%2Cas_as%3ASymbol%3F%3Dnil%2Ctype_type%3ASymbol%3F%3Dnil%2Cselect_select%3AJoinSelectType%3D%26quot%3B%2A%26quot%3B%29-instance-method">#join</a></code>.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/vladfaust/core.cr/blob/b8a0603cebd3c93b2c83e55a9f9fcd04dfc38b5d/src/core/query/instance/join.cr#L157" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="left_outer_join(reference,as_as=nil,select_select=&amp;quot;*&amp;quot;)-instance-method">
+      <div class="signature">
+        
+        def <strong>left_outer_join</strong>(reference, as _as = <span class="n">nil</span>, select _select = <span class="s">&quot;*&quot;</span>)
+
+        <a class="method-permalink" href="#left_outer_join%28reference%2Cas_as%3Dnil%2Cselect_select%3D%26quot%3B%2A%26quot%3B%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p><code>LEFT OUTER JOIN</code> <em>reference</em>. See <code><a href="../../Core/Query/Instance.html#join%28reference%3ASymbol%2Cas_as%3ASymbol%3F%3Dnil%2Ctype_type%3ASymbol%3F%3Dnil%2Cselect_select%3AJoinSelectType%3D%26quot%3B%2A%26quot%3B%29-instance-method">#join</a></code>.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/vladfaust/core.cr/blob/b8a0603cebd3c93b2c83e55a9f9fcd04dfc38b5d/src/core/query/instance/join.cr#L157" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="limit(limit:Int32|Int64|Nil)-instance-method">
+      <div class="signature">
+        
+        def <strong>limit</strong>(limit : Int32 | Int64 | Nil)
+
+        <a class="method-permalink" href="#limit%28limit%3AInt32%7CInt64%7CNil%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Set <code>LIMIT</code> clause.</p>
+
+<pre><code><span class="t">Query</span>.<span class="k">new</span>(<span class="t">User</span>).limit(<span class="n">50</span>).to_s
+<span class="c"># =&gt; SELECT * FROM users LIMIT 50</span></code></pre></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/vladfaust/core.cr/blob/b8a0603cebd3c93b2c83e55a9f9fcd04dfc38b5d/src/core/query/instance/limit.cr#L11" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="not_having(clause,*params)-instance-method">
+      <div class="signature">
+        
+        def <strong>not_having</strong>(clause, *params)
+
+        <a class="method-permalink" href="#not_having%28clause%2C%2Aparams%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Add <code>HAVING NOT</code> clause.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/vladfaust/core.cr/blob/b8a0603cebd3c93b2c83e55a9f9fcd04dfc38b5d/src/core/query/instance/having.cr#L129" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="not_having-instance-method">
+      <div class="signature">
+        
+        def <strong>not_having</strong>
+
+        <a class="method-permalink" href="#not_having-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Add <code>HAVING NOT</code> clause.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/vladfaust/core.cr/blob/b8a0603cebd3c93b2c83e55a9f9fcd04dfc38b5d/src/core/query/instance/having.cr#L134" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="offset(offset:Int32|Int64|Nil)-instance-method">
+      <div class="signature">
+        
+        def <strong>offset</strong>(offset : Int32 | Int64 | Nil)
+
+        <a class="method-permalink" href="#offset%28offset%3AInt32%7CInt64%7CNil%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Set <code>OFFSET</code> clause.</p>
+
+<pre><code><span class="t">Query</span>(<span class="t">User</span>).<span class="k">new</span>.offset(<span class="n">5</span>).to_s
+<span class="c"># =&gt; SELECT * FROM users OFFSET 5</span></code></pre></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/vladfaust/core.cr/blob/b8a0603cebd3c93b2c83e55a9f9fcd04dfc38b5d/src/core/query/instance/offset.cr#L11" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="one-instance-method">
+      <div class="signature">
+        
+        def <strong>one</strong>
+
+        <a class="method-permalink" href="#one-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Sets this query limit to 1.</p>
+
+<pre><code>query <span class="o">=</span> <span class="t">Query</span>(<span class="t">User</span>).<span class="k">new</span>.one.to_s
+<span class="c"># =&gt; SELECT * FROM users LIMIT 1</span></code></pre></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/vladfaust/core.cr/blob/b8a0603cebd3c93b2c83e55a9f9fcd04dfc38b5d/src/core/query/instance.cr#L84" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="or-instance-method">
+      <div class="signature">
+        
+        def <strong>or</strong>
+
+        <a class="method-permalink" href="#or-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>A shorthand for calling <code><a href="../../Core/Query/Instance.html#or_where-instance-method">#or_where</a></code> or <code><a href="../../Core/Query/Instance.html#or_having-instance-method">#or_having</a></code> depending on the last clause call.</p>
+
+<pre><code>query.where(foo: <span class="s">&quot;bar&quot;</span>).or(baz: <span class="s">&quot;qux&quot;</span>)
+<span class="c"># =&gt; WHERE (foo = &#39;bar&#39;) OR (baz = &#39;qux&#39;)</span>
+query.having(foo: <span class="s">&quot;bar&quot;</span>).or(baz: <span class="s">&quot;qux&quot;</span>)
+<span class="c"># =&gt; HAVING (foo = &#39;bar&#39;) OR (baz = &#39;qux&#39;)</span></code></pre></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/vladfaust/core.cr/blob/b8a0603cebd3c93b2c83e55a9f9fcd04dfc38b5d/src/core/query/instance/wherish.cr#L20" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="or_having(clause,*params)-instance-method">
+      <div class="signature">
+        
+        def <strong>or_having</strong>(clause, *params)
+
+        <a class="method-permalink" href="#or_having%28clause%2C%2Aparams%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Add <code>"OR "HAVING</code> clause.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/vladfaust/core.cr/blob/b8a0603cebd3c93b2c83e55a9f9fcd04dfc38b5d/src/core/query/instance/having.cr#L138" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="or_having-instance-method">
+      <div class="signature">
+        
+        def <strong>or_having</strong>
+
+        <a class="method-permalink" href="#or_having-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>A convenient way to add <code>"OR "HAVING</code> clauses. Multiple clauses in a single call are joined with <code>AND</code>. See <code><a href="../../Core/Query/Instance.html#having%28clause%3AString%2Cparams%3AArray%7CTuple%7CNil%3Dnil%2Cor%3Dfalse%2Cnot%3Dfalse%29-instance-method">#having</a></code> for examples.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/vladfaust/core.cr/blob/b8a0603cebd3c93b2c83e55a9f9fcd04dfc38b5d/src/core/query/instance/having.cr#L138" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="or_not-instance-method">
+      <div class="signature">
+        
+        def <strong>or_not</strong>
+
+        <a class="method-permalink" href="#or_not-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>A shorthand for calling <code>or_where"_not"</code> or <code>or_"not_"having</code> depending on the last clause call.</p>
+
+<pre><code>query.where(foo: <span class="s">&quot;bar&quot;</span>).or<span class="s">&quot;_not&quot;</span>(baz: <span class="s">&quot;qux&quot;</span>)
+<span class="c"># =&gt; WHERE (foo = &#39;bar&#39;) OR&quot; NOT&quot; (baz = &#39;qux&#39;)</span>
+query.having(foo: <span class="s">&quot;bar&quot;</span>).or<span class="s">&quot;_not&quot;</span>(baz: <span class="s">&quot;qux&quot;</span>)
+<span class="c"># =&gt; HAVING (foo = &#39;bar&#39;) OR&quot; NOT&quot; (baz = &#39;qux&#39;)</span></code></pre></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/vladfaust/core.cr/blob/b8a0603cebd3c93b2c83e55a9f9fcd04dfc38b5d/src/core/query/instance/wherish.cr#L20" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="or_not_having(clause,*params)-instance-method">
+      <div class="signature">
+        
+        def <strong>or_not_having</strong>(clause, *params)
+
+        <a class="method-permalink" href="#or_not_having%28clause%2C%2Aparams%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Add <code>"OR ""NOT "HAVING</code> clause.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/vladfaust/core.cr/blob/b8a0603cebd3c93b2c83e55a9f9fcd04dfc38b5d/src/core/query/instance/having.cr#L138" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="or_not_having-instance-method">
+      <div class="signature">
+        
+        def <strong>or_not_having</strong>
+
+        <a class="method-permalink" href="#or_not_having-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>A convenient way to add <code>"OR ""NOT "HAVING</code> clauses. Multiple clauses in a single call are joined with <code>AND</code>. See <code><a href="../../Core/Query/Instance.html#having%28clause%3AString%2Cparams%3AArray%7CTuple%7CNil%3Dnil%2Cor%3Dfalse%2Cnot%3Dfalse%29-instance-method">#having</a></code> for examples.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/vladfaust/core.cr/blob/b8a0603cebd3c93b2c83e55a9f9fcd04dfc38b5d/src/core/query/instance/having.cr#L138" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="or_where-instance-method">
+      <div class="signature">
+        
+        def <strong>or_where</strong>
+
+        <a class="method-permalink" href="#or_where-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>A convenient way to add <code>"OR "WHERE</code> clauses. Multiple clauses in a single call are joined with <code>AND</code>. See <code><a href="../../Core/Query/Instance.html#where%28or%3Dfalse%2Cnot%3Dfalse%2C%2A%2Awhere%29-instance-method">#where</a></code> for examples.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/vladfaust/core.cr/blob/b8a0603cebd3c93b2c83e55a9f9fcd04dfc38b5d/src/core/query/instance/where.cr#L138" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="or_where(clause,*params)-instance-method">
+      <div class="signature">
+        
+        def <strong>or_where</strong>(clause, *params)
+
+        <a class="method-permalink" href="#or_where%28clause%2C%2Aparams%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Add <code>"OR "WHERE</code> clause.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/vladfaust/core.cr/blob/b8a0603cebd3c93b2c83e55a9f9fcd04dfc38b5d/src/core/query/instance/where.cr#L138" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="or_where_not(clause,*params)-instance-method">
+      <div class="signature">
+        
+        def <strong>or_where_not</strong>(clause, *params)
+
+        <a class="method-permalink" href="#or_where_not%28clause%2C%2Aparams%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Add <code>"OR ""NOT "WHERE</code> clause.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/vladfaust/core.cr/blob/b8a0603cebd3c93b2c83e55a9f9fcd04dfc38b5d/src/core/query/instance/where.cr#L138" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="or_where_not-instance-method">
+      <div class="signature">
+        
+        def <strong>or_where_not</strong>
+
+        <a class="method-permalink" href="#or_where_not-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>A convenient way to add <code>"OR ""NOT "WHERE</code> clauses. Multiple clauses in a single call are joined with <code>AND</code>. See <code><a href="../../Core/Query/Instance.html#where%28or%3Dfalse%2Cnot%3Dfalse%2C%2A%2Awhere%29-instance-method">#where</a></code> for examples.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/vladfaust/core.cr/blob/b8a0603cebd3c93b2c83e55a9f9fcd04dfc38b5d/src/core/query/instance/where.cr#L138" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="order_by(column:Symbol|String,order:Symbol|String|Nil=nil)-instance-method">
+      <div class="signature">
+        
+        def <strong>order_by</strong>(column : Symbol | String, order : Symbol | String | Nil = <span class="n">nil</span>)
+
+        <a class="method-permalink" href="#order_by%28column%3ASymbol%7CString%2Corder%3ASymbol%7CString%7CNil%3Dnil%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Add <code>ORDER BY</code> clause. Only <code>Symbol</code>s are accepted.</p>
+
+<pre><code><span class="t">Query</span>.<span class="k">new</span>(<span class="t">User</span>).order_by(<span class="n">:name</span>, <span class="n">:DESC</span>).to_s
+<span class="c"># =&gt; SELECT * FROM users ORDER BY name DESC</span></code></pre></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/vladfaust/core.cr/blob/b8a0603cebd3c93b2c83e55a9f9fcd04dfc38b5d/src/core/query/instance/order_by.cr#L14" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="params-instance-method">
+      <div class="signature">
+        
+        def <strong>params</strong>
+
+        <a class="method-permalink" href="#params-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>A list of params for this query.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/vladfaust/core.cr/blob/b8a0603cebd3c93b2c83e55a9f9fcd04dfc38b5d/src/core/query/instance.cr#L6" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="query_type-instance-method">
+      <div class="signature">
+        
+        def <strong>query_type</strong>
+
+        <a class="method-permalink" href="#query_type-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/vladfaust/core.cr/blob/b8a0603cebd3c93b2c83e55a9f9fcd04dfc38b5d/src/core/query/instance.cr#L15" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="reset-instance-method">
+      <div class="signature">
+        
+        def <strong>reset</strong>
+
+        <a class="method-permalink" href="#reset-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Reset all the values to defaults.</p>
+
+<p><span class="flag orange">TODO</span>  Split to modules. Currently impossible due to https://github.com/crystal-lang/crystal/issues/5023</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/vladfaust/core.cr/blob/b8a0603cebd3c93b2c83e55a9f9fcd04dfc38b5d/src/core/query/instance.cr#L21" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="right_join(reference,as_as=nil,select_select=&amp;quot;*&amp;quot;)-instance-method">
+      <div class="signature">
+        
+        def <strong>right_join</strong>(reference, as _as = <span class="n">nil</span>, select _select = <span class="s">&quot;*&quot;</span>)
+
+        <a class="method-permalink" href="#right_join%28reference%2Cas_as%3Dnil%2Cselect_select%3D%26quot%3B%2A%26quot%3B%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p><code>RIGHT JOIN</code> <em>reference</em>. See <code><a href="../../Core/Query/Instance.html#join%28reference%3ASymbol%2Cas_as%3ASymbol%3F%3Dnil%2Ctype_type%3ASymbol%3F%3Dnil%2Cselect_select%3AJoinSelectType%3D%26quot%3B%2A%26quot%3B%29-instance-method">#join</a></code>.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/vladfaust/core.cr/blob/b8a0603cebd3c93b2c83e55a9f9fcd04dfc38b5d/src/core/query/instance/join.cr#L157" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="right_outer_join(reference,as_as=nil,select_select=&amp;quot;*&amp;quot;)-instance-method">
+      <div class="signature">
+        
+        def <strong>right_outer_join</strong>(reference, as _as = <span class="n">nil</span>, select _select = <span class="s">&quot;*&quot;</span>)
+
+        <a class="method-permalink" href="#right_outer_join%28reference%2Cas_as%3Dnil%2Cselect_select%3D%26quot%3B%2A%26quot%3B%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p><code>RIGHT OUTER JOIN</code> <em>reference</em>. See <code><a href="../../Core/Query/Instance.html#join%28reference%3ASymbol%2Cas_as%3ASymbol%3F%3Dnil%2Ctype_type%3ASymbol%3F%3Dnil%2Cselect_select%3AJoinSelectType%3D%26quot%3B%2A%26quot%3B%29-instance-method">#join</a></code>.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/vladfaust/core.cr/blob/b8a0603cebd3c93b2c83e55a9f9fcd04dfc38b5d/src/core/query/instance/join.cr#L157" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="select(*values)-instance-method">
+      <div class="signature">
+        
+        def <strong>select</strong>(*values)
+
+        <a class="method-permalink" href="#select%28%2Avalues%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>schema :users do</p>
+
+<pre><code>primary_key <span class="n">:id</span>
+field <span class="n">:foo</span>, <span class="t">String</span>
+field <span class="n">:bar</span>, <span class="t">String</span>, key: <span class="n">:baz</span></code></pre>
+
+<p>end
+end</p>
+
+<p>Query.new(User).select("name").to_s</p>
+
+<h1>=> SELECT name FROM users</h1>
+
+<p>User.select("DISTINCT name").select(:foo, :bar).to_s</p>
+
+<h1>=> SELECT DISTINCT name, foom baz FROM users</h1>
+
+<p>User.select(:id).select("*")</p>
+
+<h1>=> SELECT id, * FROM users</h1>
+
+<pre><code></code></pre></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/vladfaust/core.cr/blob/b8a0603cebd3c93b2c83e55a9f9fcd04dfc38b5d/src/core/query/instance/select.cr#L28" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="select-instance-method">
+      <div class="signature">
+        
+        def <strong>select</strong>
+
+        <a class="method-permalink" href="#select-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Mark this query as a SELECT one (default)</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/vladfaust/core.cr/blob/b8a0603cebd3c93b2c83e55a9f9fcd04dfc38b5d/src/core/query/instance.cr#L50" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="set-instance-method">
+      <div class="signature">
+        
+        def <strong>set</strong>
+
+        <a class="method-permalink" href="#set-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Append values to <code>SET</code> clauses, setting Query type to <code>UPDATE</code>.</p>
+
+<p><span class="flag purple">NOTE</span>  It's not included in <code><a href="../../Core/Query.html">Query</a></code> module to avoid confusion about possible <code>Schema#set</code> method. Use <code>Query#update</code> beforeahead.</p>
+
+<pre><code><span class="t">User</span>.update.set(active: <span class="n">true</span>).to_s     <span class="c"># Equal</span>
+<span class="t">Query</span>.<span class="k">new</span>(<span class="t">User</span>).set(active: <span class="n">true</span>).to_s <span class="c"># Equal</span>
+<span class="c"># =&gt; UPDATE users SET active = true</span></code></pre></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/vladfaust/core.cr/blob/b8a0603cebd3c93b2c83e55a9f9fcd04dfc38b5d/src/core/query/instance/set.cr#L31" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="set(clause,*params)-instance-method">
+      <div class="signature">
+        
+        def <strong>set</strong>(clause, *params)
+
+        <a class="method-permalink" href="#set%28clause%2C%2Aparams%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Append explicit value to <code>SET</code> clauses, setting Query type to <code>UPDATE</code>.</p>
+
+<pre><code><span class="t">User</span>.update.set(<span class="s">&quot;popularity = floor(random() * ?)&quot;</span>, <span class="n">100</span>).to_s
+<span class="c"># =&gt; UPDATE users SET popularity = floor(random() * ?) with params [100]</span></code></pre></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/vladfaust/core.cr/blob/b8a0603cebd3c93b2c83e55a9f9fcd04dfc38b5d/src/core/query/instance/set.cr#L11" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="to_s-instance-method">
+      <div class="signature">
+        
+        def <strong>to_s</strong>
+
+        <a class="method-permalink" href="#to_s-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Build the query, returning its SQL representation.</p>
+
+<p><span class="flag purple">NOTE</span>  <code><a href="../../Core/Query/Instance.html#params-instance-method">#params</a></code> are empty until built.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/vladfaust/core.cr/blob/b8a0603cebd3c93b2c83e55a9f9fcd04dfc38b5d/src/core/query/instance.cr#L116" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="update-instance-method">
+      <div class="signature">
+        
+        def <strong>update</strong>
+
+        <a class="method-permalink" href="#update-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Mark this query as an UPDATE one</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/vladfaust/core.cr/blob/b8a0603cebd3c93b2c83e55a9f9fcd04dfc38b5d/src/core/query/instance.cr#L56" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="where(or=false,not=false,**where)-instance-method">
+      <div class="signature">
+        
+        def <strong>where</strong>(or = <span class="n">false</span>, not = <span class="n">false</span>, **where)
+
+        <a class="method-permalink" href="#where%28or%3Dfalse%2Cnot%3Dfalse%2C%2A%2Awhere%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>A convenient way to add <code>WHERE</code> clauses. Multiple clauses in a single call are joined with <code>AND</code>. Examples:</p>
+
+<pre><code>user <span class="o">=</span> <span class="t">User</span>.<span class="k">new</span>(id: <span class="n">42</span>)
+query <span class="o">=</span> <span class="t">Query</span>.<span class="k">new</span>(<span class="t">Post</span>)
+
+<span class="c"># All clauses below will result in</span>
+<span class="c"># &quot;WHERE (posts.author_id = ?)&quot;</span>
+<span class="c"># with params [42]</span>
+query.where(author: user)
+query.where(author_id: user.id)
+query.where(<span class="s">&quot;posts.author_id = ?&quot;</span>, user.id)
+
+<span class="c"># Will result in</span>
+<span class="c"># &quot;WHERE (posts.author_id IN (?, ?) AND posts.popular = ?)&quot;</span>
+<span class="c"># with params [1, 2, true]</span>
+query.where(author_id: [<span class="n">1</span>, <span class="n">2</span>], popular: <span class="n">true</span>)
+
+<span class="c"># Will result in</span>
+<span class="c"># &quot;WHERE NOT ((posts.author_id = ? AND posts.editor_id IS NULL))&quot;</span>
+<span class="c"># with params [42]</span>
+query.not_where(author: user, editor: <span class="n">nil</span>)
+
+<span class="c"># Will result in</span>
+<span class="c"># &quot;WHERE (posts.author_id = ?) OR NOT (posts.editor_id IS NOT NULL)&quot;</span>
+<span class="c"># with params [42]</span>
+query.where(author: user).or_not_where(editor: <span class="o">!</span><span class="n">nil</span>)
+
+<span class="c"># Will result in</span>
+<span class="c"># &quot;WHERE (users.role = ?)&quot;</span>
+<span class="c"># with params [1]</span>
+<span class="t">User</span>.where(role: <span class="t">User</span><span class="t">::</span><span class="t">Role</span><span class="t">::</span><span class="t">Admin</span>)</code></pre></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/vladfaust/core.cr/blob/b8a0603cebd3c93b2c83e55a9f9fcd04dfc38b5d/src/core/query/instance/where.cr#L56" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="where(clause:String,params:Array|Tuple|Nil=nil,or=false,not=false)-instance-method">
+      <div class="signature">
+        
+        def <strong>where</strong>(clause : String, params : <a href="../../Array.html">Array</a> | Tuple | Nil = <span class="n">nil</span>, or = <span class="n">false</span>, not = <span class="n">false</span>)
+
+        <a class="method-permalink" href="#where%28clause%3AString%2Cparams%3AArray%7CTuple%7CNil%3Dnil%2Cor%3Dfalse%2Cnot%3Dfalse%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Add a <code>WHERE</code> <em>clause</em>, optionally interpolated with <em>params</em>. Multiple calls will join clauses with <code>AND</code>.</p>
+
+<pre><code>query.where(<span class="s">&quot;char_length(name) &gt; ?&quot;</span>, [<span class="n">10</span>]).and_not_where(<span class="s">&quot;created_at &gt; NOW()&quot;</span>).to_s
+<span class="c"># =&gt; WHERE (char_length(name) &gt; ?) AND NOT (created_at &gt; NOW())</span></code></pre></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/vladfaust/core.cr/blob/b8a0603cebd3c93b2c83e55a9f9fcd04dfc38b5d/src/core/query/instance/where.cr#L17" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="where_not-instance-method">
+      <div class="signature">
+        
+        def <strong>where_not</strong>
+
+        <a class="method-permalink" href="#where_not-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Add <code>WHERE NOT</code> clause.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/vladfaust/core.cr/blob/b8a0603cebd3c93b2c83e55a9f9fcd04dfc38b5d/src/core/query/instance/where.cr#L134" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="where_not(clause,*params)-instance-method">
+      <div class="signature">
+        
+        def <strong>where_not</strong>(clause, *params)
+
+        <a class="method-permalink" href="#where_not%28clause%2C%2Aparams%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Add <code>WHERE NOT</code> clause.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/vladfaust/core.cr/blob/b8a0603cebd3c93b2c83e55a9f9fcd04dfc38b5d/src/core/query/instance/where.cr#L129" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+  <h2>Macro Detail</h2>
+  
+    <div class="entry-detail" id="field_to_db(field,value)-macro">
+      <div class="signature">
+        
+        macro <strong>field_to_db</strong>(field, value)
+
+        <a class="method-permalink" href="#field_to_db%28field%2Cvalue%29-macro">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/vladfaust/core.cr/blob/b8a0603cebd3c93b2c83e55a9f9fcd04dfc38b5d/src/core/query/instance/wherish.cr#L2" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="map_select_to_field_keys(reference_type,selects)-macro">
+      <div class="signature">
+        
+        macro <strong>map_select_to_field_keys</strong>(reference_type, selects)
+
+        <a class="method-permalink" href="#map_select_to_field_keys%28reference_type%2Cselects%29-macro">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/vladfaust/core.cr/blob/b8a0603cebd3c93b2c83e55a9f9fcd04dfc38b5d/src/core/query/instance/join.cr#L133" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+</div>
+
+</body>
+</html>

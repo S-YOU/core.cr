@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta id="repository-name" content="github.com/vladfaust/core.cr">
+  <link href="../../css/style.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="../../js/doc.js"></script>
+  <title>Core::Repository::Delete - github.com/vladfaust/core.cr</title>
+</head>
+<body>
+
+<div id="types-list">
+  <div id="search-box">
+    <input type="search" id="search-input" placeholder="Search...">
+  </div>
+
+  <ul>
+    <li><a href="../../index.html">README</a></li>
+  </ul>
+
+  <ul>
+  
+  <li class=" " data-id="github.com/vladfaust/core.cr/Array" data-name="array(t)">
+      <a href="../../Array.html">Array</a>
+      
+    </li>
+  
+  <li class="parent open current" data-id="github.com/vladfaust/core.cr/Core" data-name="core">
+      <a href="../../Core.html">Core</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/vladfaust/core.cr/Core/Converter" data-name="core::converter(t)">
+      <a href="../../Core/Converter.html">Converter</a>
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/vladfaust/core.cr/Core/Converters" data-name="core::converters">
+      <a href="../../Core/Converters.html">Converters</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/vladfaust/core.cr/Core/Converters/Enum" data-name="core::converters::enum(enumclass)">
+      <a href="../../Core/Converters/Enum.html">Enum</a>
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/vladfaust/core.cr/Core/Converters/PG" data-name="core::converters::pg">
+      <a href="../../Core/Converters/PG.html">PG</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/vladfaust/core.cr/Core/Converters/PG/Numeric" data-name="core::converters::pg::numeric">
+      <a href="../../Core/Converters/PG/Numeric.html">Numeric</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/vladfaust/core.cr/Core/Logger" data-name="core::logger">
+      <a href="../../Core/Logger.html">Logger</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/vladfaust/core.cr/Core/Logger/Dummy" data-name="core::logger::dummy">
+      <a href="../../Core/Logger/Dummy.html">Dummy</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/vladfaust/core.cr/Core/Logger/IO" data-name="core::logger::io">
+      <a href="../../Core/Logger/IO.html">IO</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/vladfaust/core.cr/Core/Logger/Standard" data-name="core::logger::standard">
+      <a href="../../Core/Logger/Standard.html">Standard</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="github.com/vladfaust/core.cr/Core/Param" data-name="core::param">
+      <a href="../../Core/Param.html">Param</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/vladfaust/core.cr/Core/PrimaryKey" data-name="core::primarykey">
+      <a href="../../Core/PrimaryKey.html">PrimaryKey</a>
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/vladfaust/core.cr/Core/Query" data-name="core::query">
+      <a href="../../Core/Query.html">Query</a>
+      
+        <ul>
+  
+  <li class="parent " data-id="github.com/vladfaust/core.cr/Core/Query/Instance" data-name="core::query::instance(schema)">
+      <a href="../../Core/Query/Instance.html">Instance</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/vladfaust/core.cr/Core/Query/Instance/InternalHavingTuple" data-name="core::query::instance::internalhavingtuple">
+      <a href="../../Core/Query/Instance/InternalHavingTuple.html">InternalHavingTuple</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/vladfaust/core.cr/Core/Query/Instance/InternalWhereTuple" data-name="core::query::instance::internalwheretuple">
+      <a href="../../Core/Query/Instance/InternalWhereTuple.html">InternalWhereTuple</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/vladfaust/core.cr/Core/Query/Instance/QueryType" data-name="core::query::instance::querytype">
+      <a href="../../Core/Query/Instance/QueryType.html">QueryType</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent open current" data-id="github.com/vladfaust/core.cr/Core/Repository" data-name="core::repository">
+      <a href="../../Core/Repository.html">Repository</a>
+      
+        <ul>
+  
+  <li class=" current" data-id="github.com/vladfaust/core.cr/Core/Repository/Delete" data-name="core::repository::delete">
+      <a href="../../Core/Repository/Delete.html">Delete</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/vladfaust/core.cr/Core/Repository/Exec" data-name="core::repository::exec">
+      <a href="../../Core/Repository/Exec.html">Exec</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/vladfaust/core.cr/Core/Repository/Insert" data-name="core::repository::insert">
+      <a href="../../Core/Repository/Insert.html">Insert</a>
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/vladfaust/core.cr/Core/Repository/Query" data-name="core::repository::query">
+      <a href="../../Core/Repository/Query.html">Query</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/vladfaust/core.cr/Core/Repository/Query/NoResultsError" data-name="core::repository::query::noresultserror">
+      <a href="../../Core/Repository/Query/NoResultsError.html">NoResultsError</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="github.com/vladfaust/core.cr/Core/Repository/Scalar" data-name="core::repository::scalar">
+      <a href="../../Core/Repository/Scalar.html">Scalar</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/vladfaust/core.cr/Core/Repository/Update" data-name="core::repository::update">
+      <a href="../../Core/Repository/Update.html">Update</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="github.com/vladfaust/core.cr/Core/Schema" data-name="core::schema">
+      <a href="../../Core/Schema.html">Schema</a>
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/vladfaust/core.cr/Core/Validation" data-name="core::validation">
+      <a href="../../Core/Validation.html">Validation</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/vladfaust/core.cr/Core/Validation/ValidationError" data-name="core::validation::validationerror">
+      <a href="../../Core/Validation/ValidationError.html">ValidationError</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+</div>
+
+<div id="main-content">
+<h1 class="type-name">
+
+  <span class="kind">module</span> Core::Repository::Delete
+
+</h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2>Direct including types</h2>
+  <ul class="other-types-list">
+  
+    <li class="other-type"><a href="../../Core/Repository.html">Core::Repository</a></li>
+  
+  </ul>
+
+
+
+
+  <h2>Defined in:</h2>
+  
+    
+      <a href="https://github.com/vladfaust/core.cr/blob/b8a0603cebd3c93b2c83e55a9f9fcd04dfc38b5d/src/core/repository/delete.cr#L2" target="_blank">core/repository/delete.cr</a>
+    
+    <br/>
+  
+
+
+
+
+
+
+
+
+
+  <h2>Instance Method Summary</h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#delete%28query%3ACore%3A%3AQuery%3A%3AInstance%28T%29%29forallT-instance-method" class="signature"><strong>#delete</strong>(query : Core::Query::Instance(T)) forall T</a>
+        
+          <div class="summary"><p>Issue a deletion query.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#delete%28instance%3ASchema%29-instance-method" class="signature"><strong>#delete</strong>(instance : Schema)</a>
+        
+          <div class="summary"><p>Delete a single <em>instance</em> from Database.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#delete%28instances%3AArray%28Schema%29%29-instance-method" class="signature"><strong>#delete</strong>(instances : Array(Schema))</a>
+        
+          <div class="summary"><p>Delete multiple <em>instances</em> from Database.</p></div>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+<div class="methods-inherited">
+  
+</div>
+
+
+
+
+
+
+  <h2>Instance Method Detail</h2>
+  
+    <div class="entry-detail" id="delete(query:Core::Query::Instance(T))forallT-instance-method">
+      <div class="signature">
+        
+        def <strong>delete</strong>(query : <a href="../../Core/Query/Instance.html">Core::Query::Instance</a>(T)) forall T
+
+        <a class="method-permalink" href="#delete%28query%3ACore%3A%3AQuery%3A%3AInstance%28T%29%29forallT-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Issue a deletion query. Basically the same as <code>#exec</code> just calling <code>query<a href="../../Core/Repository/Delete.html#delete%28query%3ACore%3A%3AQuery%3A%3AInstance%28T%29%29forallT-instance-method">.delete</a></code> before.</p>
+
+<pre><code>repo.delete(<span class="t">User</span>.where(id: <span class="n">1</span>))
+<span class="c"># Equals to</span>
+repo.exec(<span class="t">User</span>.delete.where(id: <span class="n">1</span>))</code></pre></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/vladfaust/core.cr/blob/b8a0603cebd3c93b2c83e55a9f9fcd04dfc38b5d/src/core/repository/delete.cr#L10" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="delete(instance:Schema)-instance-method">
+      <div class="signature">
+        
+        def <strong>delete</strong>(instance : <a href="../../Core/Schema.html">Schema</a>)
+
+        <a class="method-permalink" href="#delete%28instance%3ASchema%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Delete a single <em>instance</em> from Database.
+Returns <code>DB::ExecResult</code>.</p>
+
+<p><span class="flag orange">TODO</span>  Handle errors.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/vladfaust/core.cr/blob/b8a0603cebd3c93b2c83e55a9f9fcd04dfc38b5d/src/core/repository/delete.cr#L23" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="delete(instances:Array(Schema))-instance-method">
+      <div class="signature">
+        
+        def <strong>delete</strong>(instances : <a href="../../Array.html">Array</a>(<a href="../../Core/Schema.html">Schema</a>))
+
+        <a class="method-permalink" href="#delete%28instances%3AArray%28Schema%29%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Delete multiple <em>instances</em> from Database.
+Returns <code>DB::ExecResult</code>.</p>
+
+<p><span class="flag orange">TODO</span>  Handle errors.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/vladfaust/core.cr/blob/b8a0603cebd3c93b2c83e55a9f9fcd04dfc38b5d/src/core/repository/delete.cr#L31" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+
+</div>
+
+</body>
+</html>
